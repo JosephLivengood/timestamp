@@ -2,10 +2,15 @@
 
 var express = require('express');
 var app = express();
+var path = require("path");
 var months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+var html_dir = './html/';
+
+app.use(express.static(path.join(__dirname, 'html')));
 
 app.get('/', function (req, res) {
-  res.send('TimeStamp Microservice');
+  //res.send("TimeStamp Microservice.");
+  res.sendfile(html_dir + 'index.html');
 });
 
 app.get('/:id', function (req, res) {

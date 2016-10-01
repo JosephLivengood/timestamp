@@ -1,0 +1,22 @@
+<html>
+
+<h1>TimeStamp Microservice</h1>
+
+<h3>Can pass unix date or string formated date. Also accepts 'adddays' param and will add that many days to output.</h3>
+
+<p>string format: December 15, 2015</p>
+<hr>
+
+<b>example usage:</b>
+<br>
+https://URL/December%2015,%202015
+<br>
+https://URL/1450137600
+<br>
+https://URL/December%20<b>13</b>,%202015<b>?adddays=2</b>
+<br>
+<b>example output:</b>
+<br>
+{ "unix": 1450137600, "natural": "December 15, 2015" }
+
+</html>
